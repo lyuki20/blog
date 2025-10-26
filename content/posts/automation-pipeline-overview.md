@@ -18,7 +18,7 @@ I turned my local obsidian notes into a fully automated publishing pipeline. her
 - publish automatically using github pages
 
 ## architecture overview
-![[Pasted image 20251026210649.png]]
+![](/obsidian/Pasted%20image%2020251026210649.png)
 ## The deployment script
 
 created a script so that one command handles everything:
