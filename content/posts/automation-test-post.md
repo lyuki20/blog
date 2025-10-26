@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Automation Test Post"
 date: 2025-10-26T18:44:13+09:00
 draft: false
