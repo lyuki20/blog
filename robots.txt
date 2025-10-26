@@ -1,2 +1,2 @@
 User-Agent: *
-Sitemap: https://yuuu.uk/blog/sitemap.xml
+Sitemap: https://yuuu.uk/sitemap.xml
