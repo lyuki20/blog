@@ -13,7 +13,7 @@ i turned my local obsidian notes into a fully automated publishing pipeline. her
 ## goals
 
 - write notes in obsidian
-- Sync them into my hugo site directory
+- sync them into my hugo site directory
 - build static pages, commit, and push to gitHub
 - publish automatically using github pages
 
@@ -29,7 +29,7 @@ sync, hugo, git).
 sync --delete to mirror obsidian posts into content/posts.
 3. runs hugo --minify to build the site.
 4. pushes main to github repository via ssh.
-5. publishes the public/ directory by pushing a gh-pages branch via git subtree split.
+5. publishes the public/ directory by pushing a `gh-pages` branch via git subtree split.
 ## github setup
 
 - created the repository under my account and configured ssh access. 
