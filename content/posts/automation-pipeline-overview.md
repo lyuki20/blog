@@ -1,8 +1,8 @@
 ---
-title: "Automating Obsidian to GitHub Pages"
+title: automating obsidian to github pages
 date: 2025-10-26T19:01:11+09:00
 draft: false
-summary: "How I wired Obsidian, Hugo, and GitHub Pages together with a PowerShell deployment script."
+summary: How I wired Obsidian, Hugo, and GitHub Pages together with a PowerShell deployment script.
 tags:
   - automation
   - hugo
@@ -11,7 +11,7 @@ tags:
 ---
 
 Over the last session I turned my local Obsidian notes into a fully automated publishing pipeline. Here's the journey end to end, plus a diagram of the flow.
-
+![](/obsidian/Pasted%20image%2020251026201107.png)
 ## Goals
 
 - Write notes in Obsidian (E:/iCloud/iCloudDrive/Obsidian/notes/posts)
