@@ -1,8 +1,8 @@
 ---
-title: "Automation Test Post"
+title: automation test post
 date: 2025-10-26T18:44:13+09:00
 draft: false
-summary: "Quick check that the Obsidian-to-Hugo automation publishes to GitHub Pages."
+summary: Quick check that the Obsidian-to-Hugo automation publishes to GitHub Pages.
 tags:
   - automation
   - obsidian
