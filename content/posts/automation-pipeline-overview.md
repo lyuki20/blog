@@ -36,8 +36,10 @@ Obsidian Vault (Windows)        Hugo site (WSL)
 
 I created deploy-blog.ps1 so that one command handles everything:
 
-1. Validates paths and required commands (sync, hugo, git).
-2. Uses sync --delete to mirror Obsidian posts into content/posts.
+1. Validates paths and required commands (
+sync, hugo, git).
+2. Uses 
+sync --delete to mirror Obsidian posts into content/posts.
 3. Runs hugo --minify inside WSL to build the site.
 4. Auto-detects changes, staging and committing them (timestamp default message).
 5. Pushes main to git@github.com:lyuki20/blog.git via SSH.
