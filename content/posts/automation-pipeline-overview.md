@@ -11,10 +11,6 @@ tags:
 ---
 
 Over the last session I turned my local Obsidian notes into a fully automated publishing pipeline. Here's the journey end to end, plus a diagram of the flow.
-![](/obsidian/Pasted%20image%2020251026201107.png)
-
-![](/obsidian/Pasted%20image%2020251026203152.png)
-
 ## Goals
 
 - Write notes in Obsidian (E:/iCloud/iCloudDrive/Obsidian/notes/posts)
