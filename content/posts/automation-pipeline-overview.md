@@ -9,7 +9,6 @@ tags:
   - powershell
   - hugo
 ---
-
 I turned my local obsidian notes into a fully automated publishing pipeline. here's how i did it.
 ## goals
 
