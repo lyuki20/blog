@@ -1,13 +1,14 @@
 {{ define "main" }}
+  {{ $home := . }}
   {{ with .Content }}
-    {{ . }}
+    {{ . | safeHTML }}
   {{ end }}
 
   {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
   {{ $posts := first 5 $allPosts }}
   {{ if gt (len $posts) 0 }}
     <section class="latest-posts">
-      <h2>latest posts</h2>
+      <h2>Latest posts</h2>
       <ul>
         {{ range $posts }}
           <li>
@@ -17,7 +18,7 @@
         {{ end }}
       </ul>
       {{ if gt (len $allPosts) 5 }}
-        <p><a href="{{ "posts/" | relLangURL }}">Browse all posts →</a></p>
+        <p><a href="{{ "posts/" | absLangURL }}">Browse all posts →</a></p>
       {{ end }}
     </section>
   {{ end }}
