@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on yuki's notes</title><link>https://yuuu.uk/posts/</link><description>Recent content in posts on yuki's notes</description><generator>Hugo</generator><language>en-US</language><copyright>copyright (c) 2025, yuki tsutsumi.</copyright><lastBuildDate>Sun, 26 Oct 2025 19:01:11 +0900</lastBuildDate><atom:link href="https://yuuu.uk/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>automating obsidian to github pages</title><link>https://yuuu.uk/posts/automation-pipeline-overview/</link><pubDate>Sun, 26 Oct 2025 19:01:11 +0900</pubDate><guid>https://yuuu.uk/posts/automation-pipeline-overview/</guid><description>How I wired Obsidian, Hugo, and GitHub Pages together with a PowerShell deployment script.</description></item><item><title>first post</title><link>https://yuuu.uk/posts/first-post/</link><pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate><guid>https://yuuu.uk/posts/first-post/</guid><description>&lt;p&gt;asdasdasd teste&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on yuki's notes</title><link>https://yuuu.uk/posts/</link><description>Recent content in posts on yuki's notes</description><generator>Hugo</generator><language>en-US</language><copyright>copyright (c) 2025, yuki tsutsumi.</copyright><lastBuildDate>Sun, 26 Oct 2025 19:01:11 +0900</lastBuildDate><atom:link href="https://yuuu.uk/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>automating obsidian to github pages</title><link>https://yuuu.uk/posts/automation-pipeline-overview/</link><pubDate>Sun, 26 Oct 2025 19:01:11 +0900</pubDate><guid>https://yuuu.uk/posts/automation-pipeline-overview/</guid><description>&lt;p&gt;i turned my local obsidian notes into a fully automated publishing pipeline. here&amp;rsquo;s how i did it.&lt;/p&gt;
+&lt;h2 id="goals"&gt;goals&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;write notes in obsidian&lt;/li&gt;
+&lt;li&gt;sync them into my hugo site directory&lt;/li&gt;
+&lt;li&gt;build static pages, commit, and push to gitHub&lt;/li&gt;
+&lt;li&gt;publish automatically using github pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architecture-overview"&gt;architecture overview&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://yuuu.uk/obsidian/pasted-image-20251026210649.png" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="the-deployment-script"&gt;the deployment script&lt;/h2&gt;
+&lt;p&gt;created a script so that one command handles everything:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;validates paths and required commands (
+sync, hugo, git).&lt;/li&gt;
+&lt;li&gt;uses
+sync &amp;ndash;delete to mirror obsidian posts into content/posts.&lt;/li&gt;
+&lt;li&gt;runs hugo &amp;ndash;minify to build the site.&lt;/li&gt;
+&lt;li&gt;pushes main to github repository via ssh.&lt;/li&gt;
+&lt;li&gt;publishes the public/ directory by pushing a &lt;code&gt;gh-pages&lt;/code&gt; branch via git subtree split.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="github-setup"&gt;github setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;created the repository under my account and configured ssh access.&lt;/li&gt;
+&lt;li&gt;pushed the hugo source to main.&lt;/li&gt;
+&lt;li&gt;enabled github pages on the &lt;code&gt;gh-pages&lt;/code&gt;branch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="result"&gt;result&lt;/h2&gt;
+&lt;p&gt;running the script now syncs whatever I write in obsidian, rebuilds the hugo site, pushes the commits, and republishes github pages instantly.&lt;/p&gt;</description></item><item><title>first post</title><link>https://yuuu.uk/posts/first-post/</link><pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate><guid>https://yuuu.uk/posts/first-post/</guid><description>&lt;p&gt;asdasdasd teste&lt;/p&gt;</description></item></channel></rss>

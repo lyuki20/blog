@@ -2,7 +2,7 @@
 title: automating obsidian to github pages
 date: 2025-10-26T19:01:11+09:00
 draft: false
-summary: How I wired Obsidian, Hugo, and GitHub Pages together with a PowerShell deployment script.
+summary:
 tags:
   - automation
   - git
