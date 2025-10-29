@@ -5,4 +5,4 @@ draft: false
 summary:
 tags:
 ---
-in this note i present my homelab setup
+in this note i present my homelab setup!!
