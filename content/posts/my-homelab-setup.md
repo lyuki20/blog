@@ -4,9 +4,5 @@ date: 2025-11-27T23:41:00+09:00
 draft: false
 summary:
 tags:
-  - automation
-  - git
-  - powershell
-  - hugo
 ---
 in this note i present my homelab setup
