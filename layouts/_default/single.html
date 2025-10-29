@@ -1,0 +1,29 @@
+﻿{{ define "main" }}
+  {{ if or (eq .Section "posts") (eq .Type "posts") }}
+    <header class="post-header">
+      {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+      {{ with .Date }}
+        <p class="post-meta">
+          <time datetime="{{ .Format "2006-01-02" }}">
+            {{ .Format "Mon Jan 02 2006" }}
+          </time>
+        </p>
+      {{ end }}
+      {{ with (.GetTerms "tags") }}
+        <p class="post-tags">
+          {{ range . }}<a href="{{ .Permalink }}">#{{ .LinkTitle }}</a> {{ end }}
+        </p>
+      {{ end }}
+    </header>
+  {{ else }}
+    {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+  {{ end }}
+
+  <content>
+    {{ .Content }}
+  </content>
+
+  {{ if and (or (eq .Section "posts") (eq .Type "posts")) (.Param "enablePostNavigator") }}
+    {{ partial "post_navigator.html" . }}
+  {{ end }}
+{{ end }}
