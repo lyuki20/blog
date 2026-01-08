@@ -5,11 +5,7 @@ draft: false
 summary:
 tags:
   - automation
-  - git
-  - powershell
-  - hugo
 ---
-i turned my local obsidian notes into a fully automated publishing pipeline. here's how i did it.
 ## goals
 
 - write notes in obsidian
