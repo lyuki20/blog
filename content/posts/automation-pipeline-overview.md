@@ -2,17 +2,14 @@
 title: automating obsidian to github pages
 date: 2025-10-26T19:01:11+09:00
 draft: false
-summary: a practical walkthrough of my obsidian, hugo, github, and github pages publishing workflow.
+summary: documentation of my obsidian, hugo, github, and github pages publishing workflow.
 tags:
   - automation
   - obsidian
   - hugo
-  - github pages
 ---
 
 ## goals
-
-this setup exists to keep writing simple and publishing predictable.
 
 - write posts and pages in obsidian
 - keep obsidian as the main editing interface
