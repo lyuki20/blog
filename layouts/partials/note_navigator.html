@@ -1,0 +1,19 @@
+<div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    {{ if .PrevInSection }}
+    <a href="{{ .PrevInSection.Permalink }}">
+      << Previous Note</a>
+        {{ else }}
+        <strike>
+          << Previous Note</strike>
+            {{ end }}
+  </p>
+  <p>|</p>
+  <p>
+    {{ if .NextInSection }}
+    <a href="{{ .NextInSection.Permalink }}">Next Note >></a>
+    {{ else }}
+    <strike>Next Note >></strike>
+    {{ end }}
+  </p>
+</div>

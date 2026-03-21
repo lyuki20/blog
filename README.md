@@ -1,1 +1,1 @@
-https://yuuu.uk/posts/automation-pipeline-overview/
+https://yuuu.uk/notes/automation-pipeline-overview/

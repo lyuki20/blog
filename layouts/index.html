@@ -4,21 +4,21 @@
     {{ . | safeHTML }}
   {{ end }}
 
-  {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
-  {{ $posts := first 5 $allPosts }}
-  {{ if gt (len $posts) 0 }}
-    <section class="latest-posts">
-      <h2>latest posts</h2>
+  {{ $allNotes := where .Site.RegularPages "Section" "notes" }}
+  {{ $notes := first 5 $allNotes }}
+  {{ if gt (len $notes) 0 }}
+    <section class="latest-notes">
+      <h2>latest notes</h2>
       <ul>
-        {{ range $posts }}
+        {{ range $notes }}
           <li>
-            <span class="post-date">{{ .Date.Format "2006 Jan 02" }}</span>
+            <span class="note-date">{{ .Date.Format "2006 Jan 02" }}</span>
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           </li>
         {{ end }}
       </ul>
-      {{ if gt (len $allPosts) 5 }}
-        <p><a href="{{ "posts/" | absLangURL }}">Browse all posts →</a></p>
+      {{ if gt (len $allNotes) 5 }}
+        <p><a href="{{ "notes/" | absLangURL }}">Browse all notes →</a></p>
       {{ end }}
     </section>
   {{ end }}

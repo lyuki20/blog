@@ -11,7 +11,7 @@ tags:
 
 ## goals
 
-- write posts and pages in obsidian
+- write notes and pages in obsidian
 - keep obsidian as the main editing interface
 - sync obsidian content into the hugo project
 - build the site locally in wsl
@@ -39,7 +39,7 @@ the source of truth is the obsidian vault at `e:\icloud\iclouddrive\obsidian\not
 
 inside that vault:
 
-- `posts/` contains blog posts
+- the source notes folder contains the site's note content
 - `pages/` contains editable site pages such as the homepage
 - pasted images and other supported attachments are stored in the vault and can be embedded directly in notes
 
@@ -52,11 +52,11 @@ the deployment script is a powershell entry point, but the actual hugo and git w
 when i run the script, it performs these steps:
 
 1. it validates the required paths and checks that `rsync`, `hugo`, and `git` are available in wsl.
-2. it mirrors obsidian posts into `content/posts` with `rsync --delete`, so deleted posts are removed from the hugo content tree as well.
+2. it mirrors obsidian notes into `content/notes` with `rsync --delete`, so deleted notes are removed from the hugo content tree as well.
 3. it syncs site pages from `pages/` into hugo's `content/` directory, which makes the homepage and other section pages editable from obsidian.
 4. it copies image attachments from the obsidian vault into `static/obsidian`, while excluding obsidian metadata folders and trash.
 5. it normalizes image filenames into lowercase, hyphenated slugs and rewrites obsidian embeds such as `![](/obsidian/image.png)` into standard markdown image links that hugo can publish reliably.
-6. it builds the site with `hugo --minify --buildFuture`, which also allows future-dated posts to be rendered.
+6. it builds the site with `hugo --minify --buildFuture`, which also allows future-dated notes to be rendered.
 7. it stages, commits, and pushes the source repository to `main` over ssh.
 8. it publishes the generated `public/` directory to `gh-pages` using `git subtree split`, and github pages serves that branch.
 
@@ -82,8 +82,8 @@ that separation keeps the workflow simple: write in obsidian, run one script, an
 
 a few details are important for long-term maintenance:
 
-- the posts sync excludes `_index.md`, because section index pages are managed separately
-- page sync and post sync are intentionally different: posts are mirrored more aggressively, while pages are copied into `content/`
+- the notes sync excludes `_index.md`, because section index pages are managed separately
+- page sync and note sync are intentionally different: notes are mirrored more aggressively, while pages are copied into `content/`
 - only common image formats are mirrored into `static/obsidian`
 - the published branch is force-pushed so that `gh-pages` always matches the latest generated build
 - fenced markdown code blocks written in obsidian are rendered by hugo during the build
@@ -92,7 +92,7 @@ a few details are important for long-term maintenance:
 
 the result is a manual but reliable publishing pipeline.
 
-i can write posts and pages in obsidian, paste images directly into notes, run one powershell script, and publish the updated site through github pages without opening the hugo project manually.
+i can write notes and pages in obsidian, paste images directly into notes, run one powershell script, and publish the updated site through github pages without opening the hugo project manually.
 
 the deployment is not literally instant, but once the script pushes the updated branches, github pages usually refreshes the site after a short delay.
 

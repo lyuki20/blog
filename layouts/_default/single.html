@@ -1,16 +1,16 @@
 ﻿{{ define "main" }}
-  {{ if or (eq .Section "posts") (eq .Type "posts") }}
-    <header class="post-header">
+  {{ if or (eq .Section "notes") (eq .Type "notes") }}
+    <header class="note-header">
       {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
       {{ with .Date }}
-        <p class="post-meta">
+        <p class="note-meta">
           <time datetime="{{ .Format "2006-01-02" }}">
             {{ .Format "Mon Jan 02 2006" }}
           </time>
         </p>
       {{ end }}
       {{ with (.GetTerms "tags") }}
-        <p class="post-tags">
+        <p class="note-tags">
           {{ range . }}<a href="{{ .Permalink }}">#{{ .LinkTitle }}</a> {{ end }}
         </p>
       {{ end }}
@@ -23,7 +23,7 @@
     {{ .Content }}
   </content>
 
-  {{ if and (or (eq .Section "posts") (eq .Type "posts")) (.Param "enablePostNavigator") }}
-    {{ partial "post_navigator.html" . }}
+  {{ if and (or (eq .Section "notes") (eq .Type "notes")) (.Param "enableNoteNavigator") }}
+    {{ partial "note_navigator.html" . }}
   {{ end }}
 {{ end }}

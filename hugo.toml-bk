@@ -44,9 +44,9 @@ ignoreErrors = ["error-disable-taxonomy"]
   # You can turn it off, but we would really appreciate if you don’t :-).
   hideMadeWithLine = true
 
-  # By default, if you want to read more than one blog post you have to always go
-  # back to the /blog page.
-  # By enabling this feature each blog post will have at the end a navigator
+  # By default, if you want to read more than one note you have to always go
+  # back to the /notes page.
+  # By enabling this feature each note will have a navigator at the end.
   enablePostNavigator = true
 
   # By default, this theme displays dates with a format like "02 Jan, 2006", but
